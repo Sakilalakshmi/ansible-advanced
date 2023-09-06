@@ -102,7 +102,7 @@
   - name: Load values to mongodb
     tags:
     - installation
-    ansible.builtin.shell: mongo --host mongodb.learningdevops.shop < /app/schema/catalogue.js
+    ansible.builtin.shell: mongo --host 172.31.39.225 < /app/schema/catalogue.js
 
   - name: restart catalogue
     tags:
