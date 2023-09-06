@@ -2,5 +2,6 @@
   hosts: mongodb 
   become: yes
   tasks:
-  ansible.builtin.debug:
-    msg: "Hello {{NAME}}"
+  - name: print the variables according to the environment
+    ansible.builtin.debug:
+      msg: "Hello {{NAME}}"
