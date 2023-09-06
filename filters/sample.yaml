@@ -2,6 +2,8 @@
   hosts: localhost
   vars:
     NAME: sakila
+    website: https://www.joindevops.com/batch-74s
+    Greeting: Hello Dhivya, How are you
   tasks:
   - name: convert into uppercase
     debug:
@@ -10,3 +12,11 @@
   - name: printing undefined variables
     debug:
       msg: "Course name is : {{ COURSE | default('DevOps') }}"
+
+  - name: extract hostname
+    debug:
+      msg: "{{ website | urlsplit('hostname') }}"
+
+  - name: split
+    debug:
+      msg: "{{ Greeting |  split(',') }}"
