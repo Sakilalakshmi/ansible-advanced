@@ -9,4 +9,4 @@
 
   - name: printing undefined variables
     debug:
-      msg: "Course name is : {{ COURSE | default(DevOps) }}"
+      msg: "Course name is : {{ COURSE | default('DevOps') }}"
